@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap')
+
+$blue: #20243b
+$lightblue: #63edfe
+$orange: #f45b2e
+$black: #000000
+
+body
+  position: relative
+
+.background
+  position: absolute
+  top: -5px
+  width: 100%
+  display: flex
+  justify-content: center
+  & img
+    max-width: 62.5%
+
+.header,
+.info,
+.advantages,
+.footer
+  position: relative
+
+.container
+  max-width: 790px
+  margin: 0 auto
+  padding: 0 15px
+  &_small
+    max-width: 590px
+    margin: 0 auto
+    padding: 0 15px
+    @media screen and (max-width: 600px)
+      padding: 0
+
+.header
+  &__top
+    background-color: $lightblue
+    border-radius: 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    & a
+      color: $blue
+      font-size: 20px
+      font-weight: 600
+      padding: 14px 0
+      @media screen and (max-width: 600px)
+        font-size: 16px
+  &__middle
+    padding: 25px 0 35px
+  &__logos
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    padding: 10px 0
+    @media screen and (max-width: 700px)
+      flex-direction: column
+      align-items: center
+    & a
+      display: block
+      margin: 0 40px
+      &:nth-of-type(2)
+        margin: 0 10px
+      @media screen and (max-width: 700px)
+        margin: 0 0 20px 0
+        &:nth-of-type(2)
+          margin: 0
+    &:before
+      content: ""
+      background-color: #d9d9d9
+      width: 1px
+      display: block
+      height: 100%
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      @media screen and (max-width: 700px)
+        display: none
+  &__content
+    text-align: center
+    font-size: 18px
+    color: $blue
+    font-weight: 300
+    margin-top: 20px
+    @media screen and (max-width: 600px)
+      font-size: 16px
+  &__bottom
+    background-color: $lightblue
+    border-radius: 31px
+    padding: 15px 0
+    text-align: center
+    font-size: 30px
+    font-weight: 700
+    @media screen and (max-width: 600px)
+      font-size: 20px
+
+.info
+  padding: 55px 0 0 0
+  @media screen and (max-width: 600px)
+    padding-top: 30px
+  &__top
+    padding-bottom: 55px
+    position: relative
+    @media screen and (max-width: 600px)
+      padding-bottom: 30px
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      width: 115%
+      max-width: 96vw
+      top: 100%
+      left: 50%
+      transform: translate(-50%, -100%)
+      background-color: $lightblue
+      height: 3px
+    & p
+      text-align: center
+      color: $blue
+      font-size: 30px
+      font-weight: 700
+      @media screen and (max-width: 600px)
+        font-size: 24px
+      &.bold
+        font-size: 90px
+        line-height: 120%
+        color: $orange
+        @media screen and (max-width: 600px)
+          font-size: 60px
+          line-height: 130%
+  &__bottom
+    padding: 20px 0 20px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      width: 63%
+      max-width: 96vw
+      top: 100%
+      left: 50%
+      transform: translate(-50%, -100%)
+      background-color: $lightblue
+      height: 3px
+    & p
+      text-align: center
+      color: $blue
+      line-height: 115%
+      font-size: 18px
+      font-weight: 300
+      @media screen and (max-width: 600px)
+        font-size: 16px
+      &.bold
+        font-size: 70px
+        line-height: 100%
+        font-weight: 700
+        color: $orange
+        @media screen and (max-width: 600px)
+          font-size: 48px
+  &__links
+    display: flex
+    justify-content: center
+    position: relative
+    padding: 75px 0
+    @media screen and (max-width: 600px)
+      padding: 35px 0
+    @media screen and (max-width: 500px)
+      flex-direction: column
+      align-items: center
+      justify-content: center
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      width: 100px
+      top: 100%
+      left: 50%
+      transform: translate(-50%, -100%)
+      background-color: #1f5bff
+      height: 3px
+    & a
+      color: $blue
+      background-color: $lightblue
+      font-size: 18px
+      font-weight: 500
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 20px
+      width: 200px
+      height: 55px
+      text-align: center
+      border-radius: 30px
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+      &:hover
+        background-color: $orange
+        color: #ffffff
+      &:active
+        background-color: $lightblue
+        color: $blue
+
+.advantages
+  padding: 40px 15px
+  &__title
+    font-weight: 700
+    font-size: 20px
+    color: $black
+    line-height: 125%
+    @media screen and (max-width: 600px)
+      font-size: 16px
+  & p
+    font-size: 20px
+    color: $black
+    line-height: 125%
+    margin: 25px 0
+    font-weight: 300
+    @media screen and (max-width: 600px)
+      font-size: 16px
+  & li
+    font-size: 20px
+    color: $black
+    line-height: 155%
+    font-weight: 300
+    list-style: initial
+    margin-left: 20px
+    @media screen and (max-width: 600px)
+      font-size: 16px
+
+.footer
+  max-width: 560px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px 30px 22px
+  border-radius: 37px
+  background-color: $blue
+  @media screen and (max-width: 600px)
+    padding: 16px 20px 18px
+  &__right
+    display: flex
+    align-items: center
+    & a
+      display: flex
+      height: 30px
+      width: 30px
+      justify-content: center
+      align-items: center
+      font-size: 20px
+      background-color: #ffffff
+      color: $blue
+      margin-left: 10px
+      border-radius: 50%
+      @media screen and (max-width: 600px)
+        font-size: 16px
